@@ -1,0 +1,6 @@
+{
+  "name": "Chợ Tiếng Trung - Đi Chợ & Học Tiếng Trung",
+  "description": "Ứng dụng mô phỏng đi chợ & siêu thị: học từ vựng trái cây đồ uống, luyện đọc phát âm, hội thoại trả giá, thanh toán tiền ảo và làm bài kiểm tra ôn tập.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

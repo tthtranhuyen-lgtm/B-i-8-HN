@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chợ Tiếng Trung - Đi Chợ & Học Tiếng Trung</title>
+    <meta name="description" content="Ứng dụng mô phỏng đi chợ & siêu thị: học từ vựng trái cây đồ uống, luyện đọc phát âm, hội thoại trả giá, thanh toán tiền ảo và làm bài kiểm tra ôn tập." />
+    <meta property="og:title" content="Chợ Tiếng Trung - Đi Chợ & Học Tiếng Trung" />
+    <meta property="og:description" content="Ứng dụng mô phỏng đi chợ & siêu thị: học từ vựng trái cây đồ uống, luyện đọc phát âm, hội thoại trả giá, thanh toán tiền ảo và làm bài kiểm tra ôn tập." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      // Gracefully handle browser extension fetch interceptors
+      try {
+        let currentFetch = window.fetch ? window.fetch.bind(window) : undefined;
+        Object.defineProperty(window, 'fetch', {
+          get: function() { return currentFetch; },
+          set: function(val) { currentFetch = val; },
+          configurable: true,
+          enumerable: true
+        });
+      } catch (err) {}
+
+      // Prevent chrome extension errors from interrupting app runtime
+      window.addEventListener('error', function(e) {
+        if (
+          (e && e.filename && e.filename.includes('chrome-extension://')) ||
+          (e && e.message && e.message.includes('Cannot set property fetch'))
+        ) {
+          if (e.preventDefault) e.preventDefault();
+          if (e.stopImmediatePropagation) e.stopImmediatePropagation();
+          return true;
+        }
+      }, true);
+    </script>
+  </head>
+  <body class="bg-amber-50/40 text-stone-900 antialiased font-sans">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
